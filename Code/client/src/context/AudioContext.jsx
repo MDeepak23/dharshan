@@ -10,14 +10,14 @@ export const AudioProvider = ({ children }) => {
   const audioRef = useRef(null);
   const location = useLocation();
 
-  // Handle automatic stopping of audio when navigating away from temple details pages
+ 
   useEffect(() => {
     if (!location.pathname.startsWith('/temple/')) {
       stopSong();
     }
   }, [location.pathname]);
 
-  // Handle synchronization of audio element properties and playback
+
   useEffect(() => {
     if (!audioRef.current) return;
     const audio = audioRef.current;
