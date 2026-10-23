@@ -4,7 +4,7 @@ let isConnected = false;
 
 const connectDB = async () => {
   try {
-    const uri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/darshanease';
+    const uri = "mongodb+srv://venkatadeepak8_db_user:E96a6C412jh27pMj@cluster0.otijiry.mongodb.net/darshanease?retryWrites=true&w=majority&appName=Cluster0" || process.env.MONGODB_URI;
     console.log(`Attempting to connect to MongoDB: ${uri}`);
     
     const conn = await mongoose.connect(uri, {
